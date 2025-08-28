@@ -1,0 +1,77 @@
+
+header {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(0, 0%, 15%);
+    border-radius: 15px;
+    width: 95%;
+    max-width: 400px;
+    overflow: hidden;
+
+}
+
+#display {
+    width: 100%;
+    padding: 15px;
+    font-size: 3rem;
+    text-align: left;
+    border: none;
+background: linear-gradient(135deg, #1e3a8a, #c026d3);
+    color: white;
+    box-sizing: border-box;
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    padding: 15px;
+}
+
+button {
+    width: 100%;
+    aspect-ratio: 1 / 1;   /* keeps buttons square */
+    border-radius: 50%;
+    border: none;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(0, 0%, 40%);
+}
+
+button:active {
+    background-color: hsl(0, 0%, 50%);
+}
+
+.operator-btn {
+background: linear-gradient(135deg, #3b82f6, #9333ea);
+}
+.operator-btn:hover {
+    background-color: hsl(35, 100%, 65%);
+}
+.operator-btn:active {
+    background-color: hsl(35, 100%, 75%);
+}
+
+
+/* Phones */
+@media (max-width: 600px) {
+    #display {
+        font-size: 3.5rem;   /* increase text size */
+        padding: 25px;       /* increase padding */
+        height: 80px;        /* ensure taller input */
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+    #display {
+        font-size: 4rem;     /* even larger for small devices */
+        padding: 30px;
+        height: 90px;
+    }
+}
