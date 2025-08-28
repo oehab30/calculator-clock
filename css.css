@@ -120,24 +120,36 @@ background: linear-gradient(90deg,#00dbde,#fc00ff);
   }
 }
 
-@media(max-width: 590px){
-  .coontainer{
-  grid-template-rows: 20% 80%;
+@@media (max-width: 590px) {
+  .container {
+    width: 95%;
+    height: auto;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr; /* stack vertically */
+    padding: 1rem;
+    margin: 20px auto;
   }
-    h1{
-      margin-top: 0;
-    }
 
+  h1 {
+    margin-top: 0;
+    font-size: 2rem;
+    text-align: center;
+  }
 
-.box{
-  display: grid;
-    grid-template-rows: 33% 33% 335;
-}
+  .box {
+    flex-direction: column; /* stack clocks vertically */
+    align-items: center;
+    gap: 1rem;
+  }
 
-.clock{
-  width: 30vw;
-  margin: 0;
-  font-size: 4rem;
-  margin-top: .8rem;
-    }
+  .clock {
+    width: 100%;
+    height: 6rem;
+    font-size: 2rem;
+    margin: 0.5rem 0;
+  }
+
+  .clock p {
+    font-size: 0.9rem;
+  }
 }
